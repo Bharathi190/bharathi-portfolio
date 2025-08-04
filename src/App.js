@@ -4,11 +4,18 @@ export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const tools = [
-    { name: 'AWS', category: 'Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
-    { name: 'Azure', category: 'Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
-    { name: 'Docker', category: 'Containers', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-    { name: 'Kubernetes', category: 'Containers', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
-    { name: 'GitHub Actions', category: 'CI/CD', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
+    { name: 'AWS', category: 'Cloud' },
+    { name: 'Azure', category: 'Cloud' },
+    { name: 'Docker', category: 'Containers' },
+    { name: 'Kubernetes', category: 'Containers' },
+    { name: 'GitHub Actions', category: 'CI/CD' },
+    { name: 'Prometheus', category: 'Monitoring' },
+    { name: 'Grafana', category: 'Monitoring' },
+    { name: 'Trivy', category: 'Security' },
+    { name: 'Hasicorp Vault', category: 'Security' },
+    { name: 'MySQL', category: 'Databases' },
+    { name: 'PostgreSQL', category: 'Databases' },
+    { name: 'MongoDB', category: 'Databases' }
   ];
 
   const categories = ['All', 'Cloud', 'CI/CD', 'Infrastructure', 'Containers', 'Monitoring', 'Security', 'Databases', 'OS'];
@@ -26,7 +33,7 @@ export default function Portfolio() {
         <p className="text-green-400 text-sm mb-6">🚀 Delivered 100+ production deployments across AWS & Azure</p>
         <div className="flex justify-center gap-4 mb-6">
           {tools.map((tool, idx) => (
-            <img key={idx} src={tool.icon} alt={tool.name} className="h-8" />
+            <p key={idx} className="text-white text-sm">{tool.name}</p>
           ))}
         </div>
         <div className="flex justify-center gap-4">
@@ -80,8 +87,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             {filteredTools.map((tool, idx) => (
               <div key={idx} className="bg-slate-800 p-6 rounded shadow">
-                <img src={tool.icon} alt={tool.name} className="h-10 mx-auto mb-2" />
-                <p className="text-white">{tool.name}</p>
+                <p className="text-white text-lg font-medium">{tool.name}</p>
               </div>
             ))}
           </div>
