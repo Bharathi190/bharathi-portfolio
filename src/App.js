@@ -13,7 +13,7 @@ export default function Portfolio() {
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-8" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-8" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="h-8" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" className="h-8" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="h-8" />
         </div>
         <div className="flex justify-center gap-4">
           <a href="#contact" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded">Get in touch</a>
@@ -32,68 +32,50 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="projects" className="py-16">
-          <h2 className="text-3xl font-bold mb-8 text-center text-white">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-slate-800 p-6 rounded shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2">🚀 Secured CI/CD Pipeline for AI Applications</h3>
-              <p>
-                Architected and implemented a secure CI/CD pipeline tailored for AI/ML applications using GitHub Actions and Kubernetes. Incorporated secret management using HashiCorp Vault, image vulnerability scanning with Trivy, and automated deployments to AKS. Integrated SonarQube for static code analysis and enforced security policies to ensure model integrity and infrastructure compliance.
-              </p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2">📊 Centralized Monitoring</h3>
-              <p>
-                Built a comprehensive observability platform by deploying Prometheus and Grafana. Configured Node Exporter, kube-state-metrics, and custom Grafana dashboards for real-time visibility into infrastructure and application metrics. Set up alerting rules for proactive incident response.
-              </p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2">🔐 Automated Backup and Recovery</h3>
-              <p>
-                Engineered an automated backup and recovery solution using Velero and Azure Blob Storage to safeguard Kubernetes clusters and databases. CronJobs managed routine snapshots, and secrets were securely handled using HashiCorp Vault, ensuring compliance and quick disaster recovery.
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section id="skills" className="py-16 border-t border-slate-700">
-          <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
-          <div className="grid md:grid-cols-3 gap-6 text-center text-white">
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Cloud</h3>
-              <p>Azure, AWS</p>
+          <h2 className="text-3xl font-bold mb-8 text-center">Skills & Tools</h2>
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <span className="px-4 py-1 bg-blue-600 text-white rounded">Cloud</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">CI/CD</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">Infrastructure</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">Containers</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">Monitoring</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">Security</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">Databases: MySQL, PostgreSQL, MongoDB</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">OS</span>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" className="h-10 mx-auto mb-2" />
+              <p className="text-white">AWS</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Azure Services</h3>
-              <p>Azure VM, VNet, AKS, Azure Disks, Blob Storage, Azure Fileshare, VNet Peering, Microsoft Entra (IAM), Azure SFTP</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-10 mx-auto mb-2" />
+              <p className="text-white">Azure</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">AWS Services</h3>
-              <p>EC2, IAM, S3, VPC, Load Balancer, Autoscale, CloudWatch</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-10 mx-auto mb-2" />
+              <p className="text-white">Docker</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">CI/CD</h3>
-              <p>GitHub Actions, Jenkins</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="h-10 mx-auto mb-2" />
+              <p className="text-white">Kubernetes</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Containerization</h3>
-              <p>Docker, Kubernetes</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="h-10 mx-auto mb-2" />
+              <p className="text-white">GitHub Actions</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Monitoring & Logging</h3>
-              <p>Prometheus, Grafana, Loki</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="h-10 mx-auto mb-2" />
+              <p className="text-white">MySQL</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Security</h3>
-              <p>HashiCorp Vault</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" className="h-10 mx-auto mb-2" />
+              <p className="text-white">PostgreSQL</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">SSL Certificates</h3>
-              <p>Cert-Manager for K8s, Certbot for VMs</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Web Servers & API Gateway</h3>
-              <p>Nginx, Ingress Controller, Gateway API</p>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="h-10 mx-auto mb-2" />
+              <p className="text-white">MongoDB</p>
             </div>
           </div>
         </section>
