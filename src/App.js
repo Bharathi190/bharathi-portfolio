@@ -32,6 +32,24 @@ export default function Portfolio() {
           </div>
         </section>
 
+        <section id="projects" className="py-16 border-t border-slate-700">
+          <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+          <div className="grid gap-6">
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <h3 className="text-xl font-semibold mb-2">Secure CI/CD Pipeline for AI Applications</h3>
+              <p>Implemented GitHub Actions-based pipelines integrated with Trivy, SonarQube, Docker, and AKS for secure AI deployments.</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <h3 className="text-xl font-semibold mb-2">Centralized Monitoring and Logging</h3>
+              <p>Configured Prometheus, Grafana, and Loki for real-time infrastructure monitoring and alerts using kube-state-metrics and node exporters.</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded shadow">
+              <h3 className="text-xl font-semibold mb-2">Automated Backup and Recovery</h3>
+              <p>Designed and deployed automated DB backups on all platforms using CronJobs and Azure Blob Storage, with secure credentials and a tested restore process.</p>
+            </div>
+          </div>
+        </section>
+
         <section id="skills" className="py-16 border-t border-slate-700">
           <h2 className="text-3xl font-bold mb-8 text-center">Skills & Tools</h2>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -41,7 +59,7 @@ export default function Portfolio() {
             <span className="px-4 py-1 bg-slate-700 text-white rounded">Containers</span>
             <span className="px-4 py-1 bg-slate-700 text-white rounded">Monitoring</span>
             <span className="px-4 py-1 bg-slate-700 text-white rounded">Security</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">Databases: MySQL, PostgreSQL, MongoDB</span>
+            <span className="px-4 py-1 bg-slate-700 text-white rounded">Databases</span>
             <span className="px-4 py-1 bg-slate-700 text-white rounded">OS</span>
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -64,18 +82,6 @@ export default function Portfolio() {
             <div className="bg-slate-800 p-6 rounded shadow">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="h-10 mx-auto mb-2" />
               <p className="text-white">GitHub Actions</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="h-10 mx-auto mb-2" />
-              <p className="text-white">MySQL</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" className="h-10 mx-auto mb-2" />
-              <p className="text-white">PostgreSQL</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="h-10 mx-auto mb-2" />
-              <p className="text-white">MongoDB</p>
             </div>
           </div>
         </section>
