@@ -1,87 +1,113 @@
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
-      <header className="bg-blue-900 text-white py-12 text-center">
-        <h1 className="text-5xl font-bold">Hi, I'm Bharathi 👋</h1>
-        <p className="mt-4 text-xl">DevOps Engineer | CI/CD | Cloud | Monitoring</p>
-        <div className="mt-4">
-          <a href="https://www.linkedin.com/in/bharathi-356035236" className="underline mr-4" target="_blank">LinkedIn</a>
-          <a href="https://github.com/Bharathi190" className="underline" target="_blank">GitHub</a>
+    <div className="min-h-screen bg-[#0f172a] text-white font-sans">
+      <header className="py-24 text-center">
+        <h1 className="text-5xl font-extrabold mb-4">Hello, I'm Bharathi</h1>
+        <p className="text-xl mb-3">
+          DevOps Engineer building scalable cloud platforms, streamlining CI/CD pipelines,
+          and ensuring secure, zero-downtime deployments.
+        </p>
+        <p className="text-green-400 text-sm mb-6">🚀 Delivered 100+ production deployments across AWS & Azure</p>
+        <div className="flex justify-center gap-4 mb-6">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" className="h-8" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-8" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-8" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="h-8" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" className="h-8" />
         </div>
+        <div className="flex justify-center gap-4">
+          <a href="#contact" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded">Get in touch</a>
+          <a href="#projects" className="border border-blue-600 px-6 py-2 rounded hover:bg-blue-600">View Projects</a>
+        </div>
+        <p className="mt-6 text-sm text-gray-400">↓ Scroll to explore</p>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-10">
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">About Me</h2>
-          <p className="text-lg leading-relaxed">
-            I’m a DevOps Engineer with 2+ years of experience streamlining CI/CD pipelines, managing containerized applications using Docker & Kubernetes, and optimizing infrastructure on Azure and AWS. I specialize in GitOps, secure automation, and scalable cloud deployments. I love working on systems that are robust, observable, and easy to maintain.
-          </p>
+      <main className="px-8 max-w-5xl mx-auto">
+        <section id="experience" className="py-16">
+          <h2 className="text-3xl font-bold mb-4 text-center text-white">Professional Experience</h2>
+          <div className="bg-slate-800 p-6 rounded shadow text-center">
+            <h3 className="text-xl font-semibold">DevOps Engineer</h3>
+            <p className="text-lg">Intain Technologies, Chennai, India</p>
+            <p className="text-sm text-gray-400">December 2022 – Present</p>
+          </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Projects</h2>
-          <div className="space-y-6">
-            <div className="bg-white shadow p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-2">🚀 CI/CD for Containerized Apps</h3>
+        <section id="projects" className="py-16">
+          <h2 className="text-3xl font-bold mb-8 text-center text-white">Projects</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-slate-800 p-6 rounded shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">🚀 Secured CI/CD Pipeline for AI Applications</h3>
               <p>
-                Built secure CI/CD pipelines using GitHub Actions. Integrated Trivy for image scanning, SonarQube for code quality, and automated deployments to AKS clusters with rollbacks and notifications.
+                Architected and implemented a secure CI/CD pipeline tailored for AI/ML applications using GitHub Actions and Kubernetes. Incorporated secret management using HashiCorp Vault, image vulnerability scanning with Trivy, and automated deployments to AKS. Integrated SonarQube for static code analysis and enforced security policies to ensure model integrity and infrastructure compliance.
               </p>
-              <p className="text-sm text-gray-600 mt-2">Tools: GitHub, Trivy, SonarQube, Docker, AKS</p>
             </div>
-
-            <div className="bg-white shadow p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-2">📊 Centralized Monitoring & Alerting</h3>
+            <div className="bg-slate-800 p-6 rounded shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">📊 Centralized Monitoring</h3>
               <p>
-                Configured a full monitoring stack using Prometheus, Grafana, and Loki. Built visual dashboards and alerting systems using kube-state-metrics and exporters for infrastructure insights.
+                Built a comprehensive observability platform by deploying Prometheus and Grafana. Configured Node Exporter, kube-state-metrics, and custom Grafana dashboards for real-time visibility into infrastructure and application metrics. Set up alerting rules for proactive incident response.
               </p>
-              <p className="text-sm text-gray-600 mt-2">Tools: Prometheus, Grafana, Loki, Node Exporter</p>
             </div>
-
-            <div className="bg-white shadow p-6 rounded-lg">
-              <h3 className="text-2xl font-bold mb-2">🔐 Automated Backups with Security</h3>
+            <div className="bg-slate-800 p-6 rounded shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">🔐 Automated Backup and Recovery</h3>
               <p>
-                Automated database and file backups across cloud environments using CronJobs and Azure Blob Storage. Integrated Velero for cluster state recovery and security-compliant restore processes.
+                Engineered an automated backup and recovery solution using Velero and Azure Blob Storage to safeguard Kubernetes clusters and databases. CronJobs managed routine snapshots, and secrets were securely handled using HashiCorp Vault, ensuring compliance and quick disaster recovery.
               </p>
-              <p className="text-sm text-gray-600 mt-2">Tools: Azure Blob, CronJobs, Velero</p>
             </div>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Skills</h2>
-          <div className="grid grid-cols-2 gap-6 text-lg">
-            <ul className="list-disc list-inside">
-              <li>Cloud: Azure, AWS</li>
-              <li>CI/CD: GitHub Actions, Jenkins</li>
-              <li>Containers: Docker, Kubernetes</li>
-            </ul>
-            <ul className="list-disc list-inside">
-              <li>Monitoring: Prometheus, Grafana, Loki</li>
-              <li>GitOps & Version Control: Git, GitHub</li>
-              <li>Operating Systems: Linux (Ubuntu)</li>
-            </ul>
+        <section id="skills" className="py-16 border-t border-slate-700">
+          <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
+          <div className="grid md:grid-cols-3 gap-6 text-center text-white">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Cloud</h3>
+              <p>Azure, AWS</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Azure Services</h3>
+              <p>Azure VM, VNet, AKS, Azure Disks, Blob Storage, Azure Fileshare, VNet Peering, Microsoft Entra (IAM), Azure SFTP</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">AWS Services</h3>
+              <p>EC2, IAM, S3, VPC, Load Balancer, Autoscale, CloudWatch</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">CI/CD</h3>
+              <p>GitHub Actions, Jenkins</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Containerization</h3>
+              <p>Docker, Kubernetes</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Monitoring & Logging</h3>
+              <p>Prometheus, Grafana, Loki</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Security</h3>
+              <p>HashiCorp Vault</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">SSL Certificates</h3>
+              <p>Cert-Manager for K8s, Certbot for VMs</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Web Servers & API Gateway</h3>
+              <p>Nginx, Ingress Controller, Gateway API</p>
+            </div>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Certifications</h2>
-          <ul className="list-disc list-inside text-lg">
-            <li>Azure Administrator – Microsoft, Oct 2024</li>
-            <li>DevSecOps – KodeKloud, Sept 2024</li>
-            <li>AWS Certification – Btree Systems, Mar 2024</li>
-            <li>Advanced Kubernetes/AKS – Udemy, Dec 2023</li>
-            <li>GitOps with ArgoCD – Udemy, Dec 2023</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-4 border-b pb-2">Contact</h2>
-          <p className="text-lg">📧 <a href="mailto:bharathi2mm2@gmail.com" className="underline">bharathi2mm2@gmail.com</a></p>
-          <p className="text-lg">📞 +91 9361592306</p>
+        <section id="contact" className="py-16 border-t border-slate-700">
+          <h2 className="text-3xl font-bold mb-8 text-center">Contact</h2>
+          <div className="text-center">
+            <p className="text-lg mb-2">📧 bharathi2mm2@gmail.com</p>
+            <p className="text-lg">📞 +91 9361592306</p>
+          </div>
         </section>
       </main>
 
-      <footer className="text-center text-sm py-6 bg-gray-100 text-gray-500">
+      <footer className="text-center text-sm py-6 bg-slate-900 text-gray-500">
         &copy; 2025 Bharathi M. All rights reserved.
       </footer>
     </div>
