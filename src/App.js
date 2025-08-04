@@ -1,4 +1,20 @@
+import { useState } from 'react';
+
 export default function Portfolio() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const tools = [
+    { name: 'AWS', category: 'Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
+    { name: 'Azure', category: 'Cloud', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+    { name: 'Docker', category: 'Containers', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    { name: 'Kubernetes', category: 'Containers', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg' },
+    { name: 'GitHub Actions', category: 'CI/CD', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' }
+  ];
+
+  const categories = ['All', 'Cloud', 'CI/CD', 'Infrastructure', 'Containers', 'Monitoring', 'Security', 'Databases', 'OS'];
+
+  const filteredTools = activeCategory === 'All' ? tools : tools.filter(tool => tool.category === activeCategory);
+
   return (
     <div className="min-h-screen bg-[#0f172a] text-white font-sans">
       <header className="py-24 text-center">
@@ -9,11 +25,9 @@ export default function Portfolio() {
         </p>
         <p className="text-green-400 text-sm mb-6">🚀 Delivered 100+ production deployments across AWS & Azure</p>
         <div className="flex justify-center gap-4 mb-6">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" className="h-8" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-8" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-8" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="h-8" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="h-8" />
+          {tools.map((tool, idx) => (
+            <img key={idx} src={tool.icon} alt={tool.name} className="h-8" />
+          ))}
         </div>
         <div className="flex justify-center gap-4">
           <a href="#contact" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded">Get in touch</a>
@@ -53,36 +67,23 @@ export default function Portfolio() {
         <section id="skills" className="py-16 border-t border-slate-700">
           <h2 className="text-3xl font-bold mb-8 text-center">Skills & Tools</h2>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <span className="px-4 py-1 bg-blue-600 text-white rounded">Cloud</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">CI/CD</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">Infrastructure</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">Containers</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">Monitoring</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">Security</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">Databases</span>
-            <span className="px-4 py-1 bg-slate-700 text-white rounded">OS</span>
+            {categories.map((cat, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-1 rounded ${activeCategory === cat ? 'bg-blue-600 text-white' : 'bg-slate-700 text-white'}`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
           <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" className="h-10 mx-auto mb-2" />
-              <p className="text-white">AWS</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="h-10 mx-auto mb-2" />
-              <p className="text-white">Azure</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="h-10 mx-auto mb-2" />
-              <p className="text-white">Docker</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="h-10 mx-auto mb-2" />
-              <p className="text-white">Kubernetes</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded shadow">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="h-10 mx-auto mb-2" />
-              <p className="text-white">GitHub Actions</p>
-            </div>
+            {filteredTools.map((tool, idx) => (
+              <div key={idx} className="bg-slate-800 p-6 rounded shadow">
+                <img src={tool.icon} alt={tool.name} className="h-10 mx-auto mb-2" />
+                <p className="text-white">{tool.name}</p>
+              </div>
+            ))}
           </div>
         </section>
 
