@@ -13,9 +13,9 @@ export default function Portfolio() {
     { name: 'Grafana', category: 'Monitoring' },
     { name: 'Trivy', category: 'Security' },
     { name: 'Hasicorp Vault', category: 'Security' },
-    { name: 'MySQL', category: 'Databases' },
-    { name: 'PostgreSQL', category: 'Databases' },
-    { name: 'MongoDB', category: 'Databases' }
+    { name: 'MySQL', category: 'Databases', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    { name: 'PostgreSQL', category: 'Databases', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+    { name: 'MongoDB', category: 'Databases', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' }
   ];
 
   const categories = ['All', 'Cloud', 'CI/CD', 'Infrastructure', 'Containers', 'Monitoring', 'Security', 'Databases', 'OS'];
@@ -87,6 +87,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             {filteredTools.map((tool, idx) => (
               <div key={idx} className="bg-slate-800 p-6 rounded shadow">
+                {tool.icon && <img src={tool.icon} alt={tool.name} className="h-10 mx-auto mb-2" />}
                 <p className="text-white text-lg font-medium">{tool.name}</p>
               </div>
             ))}
